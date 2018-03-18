@@ -85,6 +85,7 @@ class ApiRecipePuppyWrapper extends RecipeWrapperAbstract
     }
 
     /**
+     * Devuelve TRUE si la respuesta de la api ha sido un 200
      * @param ResponseInterface $response
      * @return bool
      */

@@ -34,3 +34,7 @@ services:
     app.recipe_integration:
         alias: App\Domain\RecipeIntegration\RecipeIntegrationManager
         public: true
+
+    app.recipe_render:
+        alias: App\Domain\RecipeRender\RecipeRenderManager
+        public: true
