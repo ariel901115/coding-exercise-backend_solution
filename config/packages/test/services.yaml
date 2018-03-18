@@ -1,0 +1,4 @@
+services:
+    app.recipe_integration.wrapper:
+        class: App\Domain\RecipeIntegration\Wrapper\MockWrapper
+        autowire: false

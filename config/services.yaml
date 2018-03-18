@@ -23,6 +23,14 @@ services:
 
     # controllers are imported separately to make sure they
     # have the tag that allows actions to type-hint services
-    App\Controller\:
+
+    App\Framework\Controller\:
         resource: '../src/Framework/Controller'
         tags: ['controller.service_arguments']
+
+    App\Domain\RecipeIntegration\RecipeIntegrationManager:
+        arguments: [ '@app.recipe_integration.wrapper' ]
+
+    app.recipe_integration:
+        alias: App\Domain\RecipeIntegration\RecipeIntegrationManager
+        public: true
