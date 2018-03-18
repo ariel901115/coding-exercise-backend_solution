@@ -1,0 +1,10 @@
+services:
+
+    api_recipepuppy.client:
+        alias: eight_points_guzzle.client.api_recipepuppy
+        public: true
+
+    app.recipe_integration.wrapper:
+        class: App\Domain\RecipeIntegration\Wrapper\ApiRecipePuppyWrapper
+        autowire: false
+        arguments: [ '@api_recipepuppy.client' ]

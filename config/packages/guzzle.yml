@@ -1,0 +1,19 @@
+eight_points_guzzle:
+    # (de)activate logging/profiler; default: %kernel.debug%
+    logging: true
+
+    clients:
+        api_recipepuppy:
+            base_url: "http://www.recipepuppy.com/"
+
+            # guzzle client options (full description here: https://guzzle.readthedocs.org/en/latest/request-options.html)
+            # NOTE: "headers" option is not accepted here as it is provided as described above.
+            options:
+
+                headers:
+                    Accept: "application/json"
+
+                timeout: 30
+
+            # plugin settings
+            plugin: ~
